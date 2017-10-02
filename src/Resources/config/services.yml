@@ -1,0 +1,17 @@
+services:
+    _defaults:
+        autowire: true
+
+    Kutny\DoctrineBundle\Db\MySql\AutoincrementGapCreator:
+
+    Kutny\DoctrineBundle\Db\MySql\MultipleUpdateBuilder:
+
+    Kutny\DoctrineBundle\Db\MySql\Quoter:
+
+    Kutny\DoctrineBundle\Metadata\AttributesToColumnsTranslator:
+
+    Kutny\DoctrineBundle\QueryBuilderFactory:
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+
+    Kutny\DoctrineBundle\QueryBuilderFilterApplier:
